@@ -1,0 +1,52 @@
+1.componentWillMount -> before initial render, both client and server
+  good spot to set initial render
+
+2.componentDidMount -> after render
+  access dom, integrate with frameworks, set timers, ajax requests
+  by the time this function is called the component dom exists
+  this the spot to integrate with other third parties libraries
+
+3. componentWillReceiveProps
+   when receiving new props on other words properties changed. not called on initial render
+
+   this is the place to sate state
+
+4. shouldComponentUpdate
+   before render when new props or state are being received
+   not called on initial render
+
+   performance. return false to avoid unnecessary re-render
+
+5. componentWillUpdate
+   immediately before rendering when new props or state are being received
+   not called on initial render.
+   you can't call set state on this function
+
+6. componentDidUpdate
+   after component's updates are flushed to the dom
+   not called for the initial render
+   work with the dom after an update
+
+7. componentWillUnmount
+   immediately befor component is removed from the dom
+   cleanup
+
+keep in mind when you create multiple child dynamically, you need to provide a key for each child component. as child are added and removed, react uses this key to assure that child components are properly reordered or destroyed.
+
+
+when we create multiple instance of a given element using React components,
+React needs a key so that it can keep track of these different elements.
+for instance, as we remove elements and we add elements, this allows React to maintain 
+proper state for this to make sure that the ordering of these elements doesn't get destroyed 
+as we re-render the application.
+
+controller view 
+..................................................................................................
+
+controller view interacts with the flux as well.
+controller view is simply the top level component on the page.
+you can nest components as deeply as you'd like but it's recommended to have a single top-level 
+controller view that interacts with the store and passes all necessary data down to the children.
+it's possible to nest controller views but it's not recommended to do so,since it can cause multiple data updates.it can also cause reacts render methods to get called  multiple times.
+
+

@@ -1,0 +1,68 @@
+{
+  /*"ecmaFeatures": {
+    "jsx": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jquery": true
+  },
+  "rules": {
+    "quotes": 0,
+    "no-trailing-spaces": 0,
+    "eol-last": 0,
+    "no-unused-vars": 0,
+    "no-underscore-dangle": 0,
+    "no-alert": 0,
+    "no-lone-blocks": 0
+  },
+  "globals": {
+    "jQuery": true,
+    "$": true
+  }*/
+
+
+
+  /*"extends": "eslint:recommended",*/
+  /*"ecmaFeatures": {
+            "modules": true
+            },*/
+ /* "rules": {
+            "strict": 2
+        },
+  "globals": {
+            "jQuery":false,
+            "$":true
+        },
+  "envs": [
+            "browser",
+            "node"
+        ]*/
+
+"extends": "eslint:recommended",
+ "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+
+    "rules": {
+            "strict": 2
+        },
+  "rules": {
+    "no-console": 0,
+     "no-mixed-spaces-and-tabs": [2, "smart-tabs"]
+    },
+    "globals": {
+        "jQuery": true,
+        "$": true,
+        "console": true,
+        "require": true,
+        "module": true,
+        "document": true
+    }
+}
+
+

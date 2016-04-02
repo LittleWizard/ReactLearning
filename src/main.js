@@ -6,7 +6,7 @@ var routes = require('./routes');
 var ReactDOM = require('react-dom');
 var Route = ReactRouter.Route;
 
-var hashHistory = ReactRouter.hashHistory;
+var browserHistory = ReactRouter.browserHistory;
 
 /*ReactDom.render(routes, function (Handler) {
 	ReactDom.render(<Handler/>, document.getElementById('app'));
@@ -15,7 +15,7 @@ var hashHistory = ReactRouter.hashHistory;
 
 
 ReactDOM.render(
-  <Router history={hashHistory}>{routes}</Router>,
+  <Router history={browserHistory}>{routes}</Router>,
   document.getElementById('app')
 )
 
